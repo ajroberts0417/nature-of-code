@@ -1,0 +1,74 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* dark mode styling for body */
+  body {
+    background-color: rgb(22, 22, 22);
+    color: #fff;
+  }
+  .sketch {
+    border: 5px solid #A00;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  /* light mode styling for body */
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+  .sketch {
+    border: 5px solid #000;
+  }
+}
+
+#container {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+#md-notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+  padding-top: 5vh;
+}
+
+.block {
+  margin-top: 50px;
+}
+
+.label {
+  /* center the label */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sketch {
+  /* needed so the GUI positions itself relative to the sketch */
+  position: relative
+}
+
+canvas {
+  display: block;
+}

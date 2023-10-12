@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Golden Age Growth Chart</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="graph.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div class="block">
+      <canvas id="sigmoidDoseResponseChart" width="800" height="400"></canvas>
+    </div>
+  </div>
+  <div id="md-notes" x-data="{ open: false }"">
+      <a href=" #" @click="open = ! open"><b><u x-text="open ? 'hide notes' : 'see notes'"></u></b></a>
+    <div x-show="open" @click.outside="open = false">
+      <zero-md src="./notes.md"></zero-md>
+    </div>
+  </div>
+</body>
+
+</html>
