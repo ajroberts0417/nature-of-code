@@ -21,12 +21,6 @@
       <canvas id="sigmoidDoseResponseChart" width="800" height="400"></canvas>
     </div>
   </div>
-  <div id="md-notes" x-data="{ open: false }"">
-      <a href=" #" @click="open = ! open"><b><u x-text="open ? 'hide notes' : 'see notes'"></u></b></a>
-    <div x-show="open" @click.outside="open = false">
-      <zero-md src="./notes.md"></zero-md>
-    </div>
-  </div>
 </body>
 
 </html>

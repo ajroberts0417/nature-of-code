@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sketch</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="libraries/quicksettings.css">
+  <title>Sketch</title>
 
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-    <script src="libraries/quicksettings.js"></script>
-    <script src="libraries/p5.gui.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="sketch.js"></script>
-    <script src="sketch2.js"></script>
-    <script src="sketch3.js"></script>
-    <!-- <script src="sketch4.js"></script> -->
-  </head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="libraries/quicksettings.css">
 
-  <body>
-    <div id="container">
-      <div class="block">
-        <div class="sketch" id="sketch1">
-        </div>
-        <div class="label">Perlin Noise in Grayscale</div>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <script src="libraries/quicksettings.js"></script>
+  <script src="libraries/p5.gui.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="sketch.js"></script>
+  <script src="sketch2.js"></script>
+  <script src="sketch3.js"></script>
+  <!-- <script src="sketch4.js"></script> -->
+</head>
+
+<body>
+  <div id="container">
+    <div class="block">
+      <div class="sketch" id="sketch1">
       </div>
-      <div class="block">
-        <div class="sketch" id="sketch2">
-        </div>
-        <div class="label">Perlin Noise by Hue</div>
+      <div class="label">Perlin Noise in Grayscale</div>
+    </div>
+    <div class="block">
+      <div class="sketch" id="sketch2">
       </div>
-      <div class="block">
-        <div class="sketch" id="sketch3">
-        </div>
-        <div class="label">Perlin Noise -> Color Interpolation</div>
+      <div class="label">Perlin Noise by Hue</div>
+    </div>
+    <div class="block">
+      <div class="sketch" id="sketch3">
       </div>
-      <!-- <div class="block">
+      <div class="label">Perlin Noise -> Color Interpolation</div>
+    </div>
+    <!-- <div class="block">
         <div class="sketch" id="sketch4">
         </div>
         <div class="label">Exponential Distribution</div>
       </div> -->
+  </div>
+  <div id="md-notes" x-data="{ open: false }"">
+      <a href=" #" @click="open = ! open"><b><u x-text="open ? 'hide notes' : 'see notes'"></u></b></a>
+    <div x-show="open">
+      <zero-md id="markdown-notes" src="./notes.md">
+        <template>
+          <link rel="stylesheet" href="./styles.css" />
+        </template>
+      </zero-md>
     </div>
-    <div id="md-notes" x-data="{ open: false }"">
-      <a href="#" @click="open = ! open"><b><u x-text="open ? 'hide notes' : 'see notes'"></u></b></a>
-      <div x-show="open" @click.outside="open = false">
-        <zero-md src="./notes.md"></zero-md>
-      </div>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
